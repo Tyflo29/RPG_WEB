@@ -1,0 +1,52 @@
+
+.a{
+  color: #FFFFFF;
+  font-family:Courier New, monospace;
+  font-size: 20px;
+  text-align: center;
+  flex-flow: column wrap;
+  font-weight: normal;
+}
+.b{
+  font-family: Blippo, fantasy;
+  font-size: 20px;
+  text-align: center;
+  flex-flow: column wrap;
+}
+#paladin{
+	color:#f6ec02;
+}
+#mage{
+	color:#6e2c35;
+}
+#guerrier{
+	color:#18bf12;
+}
+#robot{
+	color:#a5a8b6;
+}
+.pv{
+	font-weight: bold;
+}
+
+.mana{
+	font-weight: bold;
+}
+body{
+background-image: url("https://i.imgur.com/ggcInAd.png")
+}
+.interface{
+display: flex;
+flex-direction: row;
+justify-content:space-around;
+ 
+}
+.personnage{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 3mm ridge rgba(100, 100, 100, .6);
+  background-color: #191F49;
+  height: 35mm;
+  width: 30mm;
+}
