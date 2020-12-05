@@ -35,7 +35,7 @@
 body{
 background-image: url("https://i.imgur.com/ggcInAd.png")
 }
-.interface{
+.stats{
 display: flex;
 flex-direction: row;
 justify-content:space-around;
@@ -50,11 +50,12 @@ justify-content:space-around;
   height: 35mm;
   width: 30mm;
 }
-.méchant{
+#méchant{
 display: flex;
-flex-direction: row;
+margin:150px;
+flex-direction: row-reverse;
 justify-content:space-evenly;
-
+align-items:center;
 
 
 }
