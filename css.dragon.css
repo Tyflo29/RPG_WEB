@@ -82,10 +82,24 @@ justify-content:space-around;
 #méchant{
 display: flex;
 margin: 100px;
-flex-direction: row-reverse;
+flex-direction: row;
 justify-content:space-evenly;
 align-items:center;
 }
-#Boss{
-transform: scaleX(-1);
+
+.statsmonstre{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 3mm ridge rgba(100, 100, 100, .6);
+  background-color: #191F49;
+  height: 35mm;
+  width: 30mm;
+}
+
+.infobulle{
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+visibility: hidden
 }
