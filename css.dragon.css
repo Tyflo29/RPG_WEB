@@ -91,7 +91,7 @@ align-items:center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: 3mm ridge rgba(100, 0, 0, .3);
+  border: 2mm ridge rgba(100, 0, 0, .3);
   background-color: #191F49;
   height: 35mm;
   width: 30mm;
