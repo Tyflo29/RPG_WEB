@@ -7,31 +7,32 @@ attaquePaladin.onclick = function(){
 
 defensePaladin.onclick = function(){
 	protection = 15
-	armure = document.getElementById("pvBoss").innerHTML
-	pvBoss= (pvBoss - degats)
-	document.getElementById("pvBoss").innerHTML = pvBoss
+	armure = Number(document.getElementById("defpaladin").innerHTML)
+	if (armure < 45){
+		armure = (protection + armure)
+		document.getElementById("defpaladin").innerHTML = armure
+	}
 }
 
-
-
-goule1.onmouseover = function(){
+//InfoBulle apparait//
+document.getElementById("goule1").onmouseover = function(){
 	document.getElementById("statsgoule1").style.visibility = "visible"
 }
-goule1.onmouseout = function(){
+document.getElementById("goule1").onmouseout = function(){
 	document.getElementById("statsgoule1").style.visibility = "hidden"
 }
 
-goule2.onmouseover = function(){
+document.getElementById("goule2").onmouseover = function(){
 	document.getElementById("statsgoule2").style.visibility = "visible"
 }
-goule2.onmouseout = function(){
+document.getElementById("goule2").onmouseout = function(){
 	document.getElementById("statsgoule2").style.visibility = "hidden"
 }
 
-Boss.onmouseover = function(){
+document.getElementById("Boss").onmouseover = function(){
 	document.getElementById("statsboss").style.visibility = "visible"
 }
-Boss.onmouseout = function(){
+document.getElementById("Boss").onmouseout = function(){
 	document.getElementById("statsboss").style.visibility = "hidden"
 }
 
