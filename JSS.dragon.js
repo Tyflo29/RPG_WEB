@@ -1,10 +1,16 @@
-
-
-var vieMonstre = function(attaqueperso){
-	pv = (100);
-	document.getElementById("pvBoss").value = pv
+attaquePaladin.onclick = function(){
+	degats = 25
+	pvBoss = document.getElementById("pvBoss").innerHTML
+	pvBoss= (pvBoss - degats)
+	document.getElementById("pvBoss").innerHTML = pvBoss
 }
 
+defensePaladin.onclick = function(){
+	protection = 15
+	armure = document.getElementById("pvBoss").innerHTML
+	pvBoss= (pvBoss - degats)
+	document.getElementById("pvBoss").innerHTML = pvBoss
+}
 
 
 
