@@ -3,6 +3,12 @@ attaquePaladin.onclick = function(){
 	pvBoss = document.getElementById("pvBoss").innerHTML
 	pvBoss= (pvBoss - degats)
 	document.getElementById("pvBoss").innerHTML = pvBoss
+	if (pvBoss <= 0){
+		document.getElementById("Boss").style.visibility="hidden";
+	}
+	if (pvGoule1 <= 0){
+		document.getElementById("goule1").style.visibility="hidden";
+	}
 }
 
 defensePaladin.onclick = function(){
