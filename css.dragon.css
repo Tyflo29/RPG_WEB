@@ -7,6 +7,7 @@
   flex-flow: column wrap;
   font-weight: normal;
 }
+
 .paladin{
 	color:#f6ec02;
 	font-family: Blippo, fantasy;
@@ -14,6 +15,7 @@
 	text-align: center;
 	flex-flow: column wrap;
 }
+
 .mage{
 	color:#7407CD;
 	font-family: Blippo, fantasy;
@@ -41,9 +43,17 @@
 .bold{
 	font-weight: bold;
 }
+
+#cible{
+display: flex;
+flex-direction: row;
+justify-content:space-evenly;
+}
+
 body{
 background-image: url("https://i.imgur.com/ggcInAd.png")
 }
+
 .stats{
 display: flex;
 flex-direction: row;
@@ -82,6 +92,7 @@ flex-direction: row;
 justify-content:space-evenly;
 align-items:center;
 }
+
 #boss{
 	visibility: visible;
 }
@@ -91,6 +102,7 @@ align-items:center;
 #goule2{
 	visibility: visible;
 }
+
 .statsmonstre{
   display: flex;
   flex-direction: column;
