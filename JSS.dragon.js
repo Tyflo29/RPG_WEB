@@ -1,4 +1,13 @@
 
+
+var vieMonstre = function(attaqueperso){
+	pv = (100);
+	document.getElementById("pvBoss").value = pv
+}
+
+
+
+
 goule1.onmouseover = function(){
 	document.getElementById("statsgoule1").style.visibility = "visible"
 }
@@ -19,3 +28,4 @@ Boss.onmouseover = function(){
 Boss.onmouseout = function(){
 	document.getElementById("statsboss").style.visibility = "hidden"
 }
+
