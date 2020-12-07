@@ -38,11 +38,7 @@
 	flex-flow: column wrap;
 }
 
-.pv{
-	font-weight: bold;
-}
-
-.mana{
+.bold{
 	font-weight: bold;
 }
 body{
