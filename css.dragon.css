@@ -82,7 +82,15 @@ flex-direction: row;
 justify-content:space-evenly;
 align-items:center;
 }
-
+#boss{
+	visibility: visible;
+}
+#goule1{
+	visibility: visible;
+}
+#goule2{
+	visibility: visible;
+}
 .statsmonstre{
   display: flex;
   flex-direction: column;
