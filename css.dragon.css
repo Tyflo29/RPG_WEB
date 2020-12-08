@@ -50,6 +50,29 @@ flex-direction: row;
 justify-content:space-evenly;
 }
 
+
+#numerodetarget{
+ display: flex;
+flex-direction: row;
+}
+
+.target{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3mm ridge rgba(100, 100, 100, .6);
+  background-color: #191F49;
+  height: 5mm;
+  width:50mm;
+  color: #FFFFFF;
+  font-family:Courier New, monospace;
+  font-size: 20px;
+  text-align: center;
+  flex-flow: column wrap;
+  font-weight: normal;
+}
+
+
 body{
 background-image: url("https://i.imgur.com/ggcInAd.png")
 }
