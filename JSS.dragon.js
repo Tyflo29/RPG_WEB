@@ -1,5 +1,5 @@
 
-var numerodecible =
+var numerodecible = document.getElementById().innerHTML
 
 ciblegoule1.onclick = function(numerodecible){
 	
