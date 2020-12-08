@@ -72,9 +72,13 @@ flex-direction: row;
   font-weight: normal;
 }
 
+.favorite{
+	visibility: visible;
+}
+
 
 body{
-background-image: url("https://i.imgur.com/ggcInAd.png")
+background-image: url("https://i.imgur.com/ggcInAd.png");
 }
 
 .stats{
