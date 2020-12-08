@@ -1,7 +1,12 @@
 
-ciblegoule1.onclick = function(){
+var numerodecible =
+
+ciblegoule1.onclick = function(numerodecible){
 	
+	return
 }
+
+
 
 attaquePaladin.onclick = function(){
 	degats = 25
@@ -19,15 +24,6 @@ defensePaladin.onclick = function(){
 	if (armure < 45){
 		armure = (protection + armure)
 		document.getElementById("defpaladin").innerHTML = armure
-	}
-}
-
-manaPaladin.onclick = function(){
-	pvpaladin = Number(document.getElementById("pvpaladin").innerHTML)
-	manapaladin = Number(document.getElementById("manapaladin").innerHTML)
-	if ((mana = 35)&&(pvpaladin <=80)){
-		pvpaladin = (pvpaladin + 20)
-		document.getElementById("pvPaladin").innerHTML = pvpaladin
 	}
 }
 
