@@ -4,7 +4,7 @@
 </head>
 <body>
 <!--Interface personnage-->
-
+<script type="text/javascript" src="JSS.dragon.js"></script>
 <!--Stats des personnage-->
 <section class="stats">
 
@@ -23,7 +23,7 @@
 	  <div class="a">--Rôle:--</div>
 	  <div class="mage"> Mage</div>
 	  <div class="a">---------</div>
-	  <div class="a"><span class="bold">90</span> PV</div>
+	  <div class="a"><span class="bold" id="pvmage">90</span> PV</div>
 	  <div class="a"><span class="bold" id="defmage">10</span> Def</div>
 	  <div class="a"><span class="bold">150</span> Mana</div>
 	</section>
@@ -33,7 +33,7 @@
 	  <div class="a">--Rôle:--</div>
 	  <div class="guerrier">Guerrier</div>
 	  <div class="a">---------</div>
-	  <div class="a"><span class="bold">130</span> PV</div>
+	  <div class="a"><span class="bold" id="pvguerrier">130</span> PV</div>
 	  <div class="a"><span class="bold" id="defguerrier">35</span> Def</div>
 	  <div class="a"><span class="bold">50</span> Mana</div>
 	</section>
@@ -43,7 +43,7 @@
 	  <div class="a">--Rôle:--</div>
 	  <div class="robot">Robot</div>
 	  <div class="a">---------</div>
-	  <div class="a"><span class="bold">150</span> PV</div>
+	  <div class="a"><span class="bold" id="pvrobot">150</span> PV</div>
 	  <div class="a"><span class="bold" id="defrobot">20</span> Def</div>
 	  <div class="a"><span class="bold">20</span> Mana</div>
 	</section>
@@ -51,30 +51,20 @@
 </section>
 <!---------------->
 <script type="text/javascript" src="JSS.dragon.js"></script>
-<!-----Cible---->
-	<section class="cibletarget">
-	  <div class="target">La cible est&nbsp;<span id="numerodetarget">1</span></div>
-	</section>
-	<section id="cible">
-      <div><input class="favorite" id="ciblegoule1" type="button" value="1"></div>
-	  <div><input class="favorite" id="cibleboss" type="button" value="2"></div>
-	  <div><input class="favorite" id="ciblegoule2" type="button" value="3"></div>
-	</section>
-<!------------->
 	
 <!-----méchant---->
 <section id="méchant">
 	
 	<div class="monstre" id="goule1">
-	<img style="-webkit-user-select: none;margin: auto;" src="file:///F:/Game%20design/Programme/RPG_Control/RPG/boss.png" height="200px" width="200px">
+	<!-----height="200px" width="200px">---->
 	</div>
 	
 	<div class="monstre" id="Boss">
-	<img style="-webkit-user-select: none;margin: auto;" src="file:///F:/Game%20design/Programme/RPG_Control/RPG/boss.png" height="300px" width="300px">
+	<!-----height="300px" width="300px">---->
 	</div>
 	
 	<div class="monstre" id="goule2">
-	<img style="-webkit-user-select: none;margin: auto;" src="file:///F:/Game%20design/Programme/RPG_Control/RPG/boss.png" height="200px" width="200px">
+	<!-----height="200px" width="200px">---->
 	<div>
 </section>
 
@@ -101,43 +91,54 @@
 </section>
 <!---------------->
 
+<!-----Cible---->
+	<section id="cible">
+      <div><input class="cible" id="ciblegoule1" type="button" value="1"></div>
+	  <div><input class="cible" id="cibleboss" type="button" value="2"></div>
+	  <div><input class="cible" id="ciblegoule2" type="button" value="3"></div>
+	</section>
+<!------------->
+	<section class="cibletarget">
+	  <div class="target">La cible est:&nbsp;<span id="numerodetarget">1</span></div>
+	</section>
+	
 <!--compétence des personnage-->
 <section class="compétence">
 	<section class="habitude">
-	  <div class="a"><img style="-webkit-user-select: none;margin: auto;" src="file:///F:/Game%20design/Programme/RPG_Control/RPG/paladin.png"></div>
+	  <div class="a" id="imagepaladin"></div>
 	  <div class="a">---------</div>
 	  <div class="paladin">Jazkez</div>
 	  <div class="a">---------</div>
-	  <div class="a"><input class="favorite styled" id="attaquePaladin" type="button" value="Attaque"></div>
+	  <div class="a"><input class="favorite styled" id="attaquePaladin" type="button" value="Attaque" activated></div>
 	  <div class="a"><input class="favorite styled" id="defensePaladin"type="button" value="Défense"></div>
 	  <div class="a"><input class="favorite styled" id="soins" type="button" value="Soins"></div>
 	</section>
 	<section class="habitude">
-	  <div class="a"><img style="-webkit-user-select: none;margin: auto;" src="file:///F:/Game%20design/Programme/RPG_Control/RPG/mage.png"></div>
+	  <div class="a" id="imagemage"></div>
 	  <div class="a">---------</div>
 	  <div class="mage">Franck</div>
 	  <div class="a">---------</div>
-	  <div class="a">Attaque</div>
-	  <div class="a">Défense</div>
-	  <div class="a">Magie</div>
+	  <div class="a"><input class="favorite styled" id="attaqueMage" type="button" value="Attaque"></div>
+	  <div class="a"><input class="favorite styled" id="defenseMage"type="button" value="Défense"></div>
+	  <div class="a"><input class="favorite styled" id="magie" type="button" value="Soins"></div>
 	</section>
 	<section class="habitude">
-	  <div class="a"><img style="-webkit-user-select: none;margin: auto;" src="file:///F:/Game%20design/Programme/RPG_Control/RPG/guerrier.png"></div>
+	  <div class="a" id="imageguerrier"></div>
 	  <div class="a">---------</div>
 	  <div class="guerrier">Oraf</div>
 	  <div class="a">---------</div>
-	  <div class="a">Attaque</div>
-	  <div class="a">Défense</div>
-	  <div class="a">Rage</div>
+	  <div class="a"><input class="favorite styled" id="attaqueGuerrier" type="button" value="Attaque"></div>
+	  <div class="a"><input class="favorite styled" id="defenseGuerrier"type="button" value="Défense"></div>
+	  <div class="a"><input class="favorite styled" id="rage" type="button" value="Soins"></div>
 	</section>
 	<section class="habitude">
-	  <div class="a"><img style="-webkit-user-select: none;margin: auto;" src="file:///F:/Game%20design/Programme/RPG_Control/RPG/robot.png"></div>
+	  <div class="a" id="imagerobot"></div>
 	  <div class="a">---------</div>
 	  <div class="robot">RT-90</div>
 	  <div class="a">---------</div>
-	  <div class="a">Attaque</div>
-	  <div class="a">Défense</div>
-	  <div class="a">Poison</div>
+	  <div class="a"><input class="favorite styled" id="attaqueRobot" type="button" value="Attaque"></div>
+	  <div class="a"><input class="favorite styled" id="defenseRobot"type="button" value="Défense"></div>
+	  <div class="a"><input class="favorite styled" id="Acide" type="button" value="Soins"></div>
 	</section>
 
 </section>
