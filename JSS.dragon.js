@@ -54,7 +54,8 @@ attaquePaladin.onclick = function(){
 		document.getElementById("pvBoss").innerHTML = pvBoss
 		if (pvBoss <= 0){
 			document.getElementById("Boss").style.visibility="hidden";
-			document.getElementById("cibleboss").style.visibility="hidden";
+			document.getElementById("cibleboss").value = "Mort";
+			document.getElementById("cibleboss").disabled = true;
 		}
 	}
 	if (numerodetarget.innerHTML == 1){
@@ -63,7 +64,8 @@ attaquePaladin.onclick = function(){
 		document.getElementById("pvGoule1").innerHTML = pvGoule1
 		if (pvGoule1 <= 0){
 			document.getElementById("goule1").style.visibility="hidden";
-			document.getElementById("ciblegoule1").style.visibility="hidden";
+			document.getElementById("ciblegoule1").value = "Mort";
+			document.getElementById("ciblegoule1").disabled = true;
 		}
 	}
 	if (numerodetarget.innerHTML == 3){
@@ -72,7 +74,8 @@ attaquePaladin.onclick = function(){
 		document.getElementById("pvGoule2").innerHTML = pvGoule2
 		if (pvGoule1 <= 0){
 			document.getElementById("goule2").style.visibility="hidden";
-			document.getElementById("ciblegoule2").style.visibility="hidden";
+			document.getElementById("ciblegoule2").value ="Mort";
+			document.getElementById("ciblegoule2").disabled = true;
 		}
 	}
 }
@@ -102,7 +105,8 @@ attaqueMage.onclick = function(){
 		document.getElementById("pvBoss").innerHTML = pvBoss
 		if (pvBoss <= 0){
 			document.getElementById("Boss").style.visibility="hidden";
-			document.getElementById("cibleboss").style.visibility="hidden";
+			document.getElementById("cibleboss").value = "Mort";
+			document.getElementById("cibleboss").disabled = true;
 		}
 	}
 	if (numerodetarget.innerHTML == 1){
@@ -111,7 +115,8 @@ attaqueMage.onclick = function(){
 		document.getElementById("pvGoule1").innerHTML = pvGoule1
 		if (pvGoule1 <= 0){
 			document.getElementById("goule1").style.visibility="hidden";
-			document.getElementById("ciblegoule1").style.visibility="hidden";
+			document.getElementById("ciblegoule1").value = "Mort";
+			document.getElementById("ciblegoule1").disabled = true;;
 		}
 	}
 	if (numerodetarget.innerHTML == 3){
@@ -120,7 +125,8 @@ attaqueMage.onclick = function(){
 		document.getElementById("pvGoule2").innerHTML = pvGoule2
 		if (pvGoule1 <= 0){
 			document.getElementById("goule2").style.visibility="hidden";
-			document.getElementById("ciblegoule2").style.visibility="hidden";
+			document.getElementById("ciblegoule2").value = "Mort";
+			document.getElementById("ciblegoule2").disabled = true;
 		}
 	}
 }
@@ -150,7 +156,8 @@ attaqueGuerrier.onclick = function(){
 		document.getElementById("pvBoss").innerHTML = pvBoss
 		if (pvBoss <= 0){
 			document.getElementById("Boss").style.visibility="hidden";
-			document.getElementById("cibleboss").style.visibility="hidden";
+			document.getElementById("cibleboss").value = "Mort";
+			document.getElementById("cibleboss").disabled = true;
 		}
 	}
 	if (numerodetarget.innerHTML == 1){
@@ -159,7 +166,8 @@ attaqueGuerrier.onclick = function(){
 		document.getElementById("pvGoule1").innerHTML = pvGoule1
 		if (pvGoule1 <= 0){
 			document.getElementById("goule1").style.visibility="hidden";
-			document.getElementById("ciblegoule1").style.visibility="hidden";
+			document.getElementById("ciblegoule1").value = "Mort";
+			document.getElementById("ciblegoule1").disabled = true;
 		}
 	}
 	if (numerodetarget.innerHTML == 3){
@@ -168,7 +176,8 @@ attaqueGuerrier.onclick = function(){
 		document.getElementById("pvGoule2").innerHTML = pvGoule2
 		if (pvGoule1 <= 0){
 			document.getElementById("goule2").style.visibility="hidden";
-			document.getElementById("ciblegoule2").style.visibility="hidden";
+			document.getElementById("ciblegoule2").value = "Mort";
+			document.getElementById("ciblegoule2").disabled = true;
 		}
 	}
 }
@@ -199,7 +208,8 @@ attaqueRobot.onclick = function(){
 		document.getElementById("pvBoss").innerHTML = pvBoss
 		if (pvBoss <= 0){
 			document.getElementById("Boss").style.visibility="hidden";
-			document.getElementById("cibleboss").style.visibility="hidden";
+			document.getElementById("ciblegoule1").value = "Mort";
+			document.getElementById("ciblegoule1").disabled = true;
 		}
 	}
 	if (numerodetarget.innerHTML == 1){
@@ -208,7 +218,8 @@ attaqueRobot.onclick = function(){
 		document.getElementById("pvGoule1").innerHTML = pvGoule1
 		if (pvGoule1 <= 0){
 			document.getElementById("goule1").style.visibility="hidden";
-			document.getElementById("ciblegoule1").style.visibility="hidden";
+			document.getElementById("cibleboss").value = "Mort";
+			document.getElementById("cibleboss").disabled = true;
 		}
 	}
 	if (numerodetarget.innerHTML == 3){
@@ -217,7 +228,8 @@ attaqueRobot.onclick = function(){
 		document.getElementById("pvGoule2").innerHTML = pvGoule2
 		if (pvGoule1 <= 0){
 			document.getElementById("goule2").style.visibility="hidden";
-			document.getElementById("ciblegoule2").style.visibility="hidden";
+			document.getElementById("ciblegoule2").value = "Mort"
+			document.getElementById("ciblegoule2").disabled = true;
 		}
 	}
 }
@@ -262,4 +274,3 @@ document.getElementById("Boss").onmouseover = function(){
 document.getElementById("Boss").onmouseout = function(){
 	document.getElementById("statsboss").style.visibility = "hidden"
 }
-
