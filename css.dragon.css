@@ -224,7 +224,7 @@ visibility: hidden;
 	margin: 3px 4px;
 	display: inline-block;
 	color: #ffffff;
-	font-size: 28px;
+	font-size: 18px;
 	cursor: pointer;
 	background: #F92732;
 	background: linear-gradient(top, #F92732 0%, #e00e19 100%);
@@ -249,7 +249,7 @@ visibility: hidden;
 	background: -o-linear-gradient(top, #d14924 0%, #eb1e1e 100%);
 }
 .cible{
-	opacity:0.8;
+	opacity: 0.8;
 }
 
 
