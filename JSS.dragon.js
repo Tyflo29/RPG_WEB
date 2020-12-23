@@ -14,45 +14,15 @@ ciblegoule2.onclick = function(){
 //----------------------------------Mort-----------------------------------------//
 
 
-//------Mort Héros--------//
-hppaladin = document.getElementById("pvpaladin").innerHTML
-if (hppaladin <= 0) {
-	 document.getElementById("imagepaladin").style.filter = "grayscale(100%)"
-	 document.getElementById("attaquePaladin").disabled = true
-	 document.getElementById("defensePaladin").disabled = true
-	 document.getElementById("soins").disabled = true
-}
 
-hpmage = document.getElementById("pvmage").innerHTML
-if (hpmage <= 0) {
-	 document.getElementById("imagemage").style.filter = "grayscale(100%)"
-	 document.getElementById("attaqueMage").disabled = true
-	 document.getElementById("defenseMage").disabled = true
-	 document.getElementById("magie").disabled = true
-}
-
-hpguerrier = document.getElementById("pvguerrier").innerHTML
-if (hpguerrier <= 0) {
-	 document.getElementById("imageguerrier").style.filter = "grayscale(100%)"
-	 document.getElementById("attaqueGuerrier").disabled = true
-	 document.getElementById("defenseGuerrier").disabled = true
-	 document.getElementById("rage").disabled = true
-}
-
-hprobot = document.getElementById("pvrobot").innerHTML
-if (hpguerrier <= 0) {
-	 document.getElementById("imagerobot").style.filter = "grayscale(100%)"
-	 document.getElementById("attaqueRobot").disabled = true
-	 document.getElementById("defenseRobot").disabled = true
-	 document.getElementById("acide").disabled = true
-}
 
 //----------------------------------Tour monstre-----------------------------------------//
 
 tourmonstre.onclick = function(){
 	degats = 20;
 	targetheros = Math.floor(Math.random() * (5 - 1)) + 1;
-	for (let i = 0; i < 9; i++) { 
+	for (let i = 0; i < 4; i++) { 
+		targetheros = Math.floor(Math.random() * (5 - 1)) + 1;
 		if (targetheros == 1){
 			pvpaladin = document.getElementById("pvpaladin").innerHTML
 			pvpaladin= (pvpaladin - degats)
@@ -76,6 +46,38 @@ tourmonstre.onclick = function(){
 			pvrobot= (pvrobot - degats)
 			document.getElementById("pvrobot").innerHTML = pvrobot
 		}
+	}
+	//------Mort Héros--------//
+	hppaladin = document.getElementById("pvpaladin").innerHTML
+	if (hppaladin <= 0) {
+		 document.getElementById("imagepaladin").style.filter = "grayscale(100%)"
+		 document.getElementById("attaquePaladin").disabled = true
+		 document.getElementById("defensePaladin").disabled = true
+		 document.getElementById("soins").disabled = true
+	}
+
+	hpmage = document.getElementById("pvmage").innerHTML
+	if (hpmage <= 0) {
+		 document.getElementById("imagemage").style.filter = "grayscale(100%)"
+		 document.getElementById("attaqueMage").disabled = true
+		 document.getElementById("defenseMage").disabled = true
+		 document.getElementById("magie").disabled = true
+	}
+
+	hpguerrier = document.getElementById("pvguerrier").innerHTML
+	if (hpguerrier <= 0) {
+		 document.getElementById("imageguerrier").style.filter = "grayscale(100%)"
+		 document.getElementById("attaqueGuerrier").disabled = true
+		 document.getElementById("defenseGuerrier").disabled = true
+		 document.getElementById("rage").disabled = true
+	}
+
+	hprobot = document.getElementById("pvrobot").innerHTML
+	if (hpguerrier <= 0) {
+		 document.getElementById("imagerobot").style.filter = "grayscale(100%)"
+		 document.getElementById("attaqueRobot").disabled = true
+		 document.getElementById("defenseRobot").disabled = true
+		 document.getElementById("acide").disabled = true
 	}
 }
 
@@ -123,7 +125,7 @@ attaquePaladin.onclick = function(){
 	if (pvGoule1 <=0 && pvGoule2 <=0 && pvBoss <=0 ){
 		alert("Vous avez gagné!");
 	}
-
+	
 }
 
 
