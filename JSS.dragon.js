@@ -50,67 +50,33 @@ if (hpguerrier <= 0) {
 //----------------------------------Tour monstre-----------------------------------------//
 
 tourmonstre.onclick = function(){
-	//--------Stop Attaque--------//
-	document.getElementById("attaquePaladin").disabled = true
-	document.getElementById("defensePaladin").disabled = true
-	document.getElementById("soins").disabled = true
-	//--------Stop Attaque--------//
-	document.getElementById("attaqueMage").disabled = true
-	document.getElementById("defenseMage").disabled = true
-	document.getElementById("magie").disabled = true
-	//--------Stop Attaque--------//
-	document.getElementById("attaqueGuerrier").disabled = true
-	document.getElementById("defenseGuerrier").disabled = true
-	document.getElementById("rage").disabled = true
-	//--------Stop Attaque--------//
-	document.getElementById("attaqueRobot").disabled = true
-	document.getElementById("defenseRobot").disabled = true
-	document.getElementById("acide").disabled = true
-	//----------------------------//
 	degats = 20;
-	list = [1,2,3];
-	targetheros = list.random;
-	if (targetheros == 1){
-		pvpaladin = document.getElementById("pvpaladin").innerHTML
-		pvpaladin= (pvpaladin - degats)
-		document.getElementById("pvpaladin").innerHTML = pvpaladin
-	} 
-		//------cible mage--------//
-	if (targetheros == 2){
-		pvmage = document.getElementById("pvmage").innerHTML
-		pvmage= (pvmage - degats)
-		document.getElementById("pvmage").innerHTML = pvmage
+	targetheros = Math.floor(Math.random() * (5 - 1)) + 1;
+	for (let i = 0; i < 9; i++) { 
+		if (targetheros == 1){
+			pvpaladin = document.getElementById("pvpaladin").innerHTML
+			pvpaladin= (pvpaladin - degats)
+			document.getElementById("pvpaladin").innerHTML = pvpaladin
+		} 
+			//------cible mage--------//
+		if (targetheros == 2){
+			pvmage = document.getElementById("pvmage").innerHTML
+			pvmage= (pvmage - degats)
+			document.getElementById("pvmage").innerHTML = pvmage
+			}
+			//------cible guerrier--------//
+		if (targetheros == 3){
+			pvguerrier = document.getElementById("pvguerrier").innerHTML
+			pvguerrier= (pvguerrier - degats)
+			document.getElementById("pvguerrier").innerHTML = pvguerrier
+		} 
+			//------cible robot--------//
+		if (targetheros == 4){
+			pvrobot = document.getElementById("pvrobot").innerHTML
+			pvrobot= (pvrobot - degats)
+			document.getElementById("pvrobot").innerHTML = pvrobot
 		}
-		//------cible guerrier--------//
-	if (targetheros == 3){
-		pvguerrier = document.getElementById("pvguerrier").innerHTML
-		pvguerrier= (pvguerrier - degats)
-		document.getElementById("pvguerrier").innerHTML = pvguerrier
-	} 
-		//------cible robot--------//
-	if (targetheros == 4){
-		pvrobot = document.getElementById("pvrobot").innerHTML
-		pvrobot= (pvrobot - degats)
-		document.getElementById("pvrobot").innerHTML = pvrobot
 	}
-
-	//--------Stop Attaque--------//
-	document.getElementById("attaquePaladin").disabled = false
-	document.getElementById("defensePaladin").disabled = false
-	document.getElementById("soins").disabled = false
-	//--------Stop Attaque--------//
-	document.getElementById("attaqueMage").disabled = false
-	document.getElementById("defenseMage").disabled = false
-	document.getElementById("magie").disabled = false
-	//--------Stop Attaque--------//
-	document.getElementById("attaqueGuerrier").disabled = false
-	document.getElementById("defenseGuerrier").disabled = false
-	document.getElementById("rage").disabled = false
-	//--------Stop Attaque--------//
-	document.getElementById("attaqueRobot").disabled = false
-	document.getElementById("defenseRobot").disabled = false
-	document.getElementById("acide").disabled = false
-	//----------------------------//
 }
 
 //----------------------------------Comptécence-----------------------------------------//
