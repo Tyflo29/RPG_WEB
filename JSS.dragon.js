@@ -1,4 +1,4 @@
-var tour = 1;
+var tour = 0;
 
 //------Choix de la cible--------//
 ciblegoule1.onclick = function(){
@@ -48,8 +48,25 @@ if (hpguerrier <= 0) {
 //----------------------------------Tour monstre-----------------------------------------//
 
 
-if (tour == 4){
-	var degats = 20;
+if (tour >= 4){
+	//--------Stop Attaque--------//
+	document.getElementById("attaquePaladin").disabled = true
+	document.getElementById("defensePaladin").disabled = true
+	document.getElementById("soins").disabled = true
+	//--------Stop Attaque--------//
+	document.getElementById("attaqueMage").disabled = true
+	document.getElementById("defenseMage").disabled = true
+	document.getElementById("magie").disabled = true
+	//--------Stop Attaque--------//
+	document.getElementById("attaqueGuerrier").disabled = true
+	document.getElementById("defenseGuerrier").disabled = true
+	document.getElementById("rage").disabled = true
+	//--------Stop Attaque--------//
+	document.getElementById("attaqueRobot").disabled = true
+	document.getElementById("defenseRobot").disabled = true
+	document.getElementById("acide").disabled = true
+	//----------------------------//
+	degats = 20;
 	targetheros = Math.random(1,5);
 	if (targetheros == 1){
 		pvpaladin = document.getElementById("pvpaladin").innerHTML
@@ -79,14 +96,17 @@ if (tour == 4){
 
 //----------------------------------Comptécence-----------------------------------------//
 //------Comptécence paladin--------//
+
 attaquePaladin.onclick = function(){
-	tour = tour + 1
+	tour = document.getElementById("numerodetour").innerHTML
+	tour++
 	document.getElementById("numerodetour").innerHTML = tour
-}
-attaquePaladin.onclick = function(){
 	document.getElementById("attaquePaladin").disabled = true
-	 document.getElementById("defensePaladin").disabled = false
-	 document.getElementById("soins").disabled = false
+	document.getElementById("defensePaladin").disabled = false
+	document.getElementById("soins").disabled = false
+	if (tour <= 4){
+		tour = 0
+	}
 	degats = 20
 	if (numerodetarget.innerHTML == 2){
 		pvBoss = document.getElementById("pvBoss").innerHTML
@@ -122,6 +142,9 @@ attaquePaladin.onclick = function(){
 
 
 defensePaladin.onclick = function(){
+	tour = document.getElementById("numerodetour").innerHTML
+	tour++
+	document.getElementById("numerodetour").innerHTML = tour
 	protection = 15
 	document.getElementById("attaquePaladin").disabled = false
 	 document.getElementById("defensePaladin").disabled = true
@@ -135,6 +158,9 @@ defensePaladin.onclick = function(){
 //------Comptécence Mage--------//
 
 attaqueMage.onclick = function(){
+	tour = document.getElementById("numerodetour").innerHTML
+	tour++
+	document.getElementById("numerodetour").innerHTML = tour
 	degats = 20
 	document.getElementById("attaqueMage").disabled = true
 	 document.getElementById("defenseMage").disabled = false
@@ -172,6 +198,9 @@ attaqueMage.onclick = function(){
 }
 
 defenseMage.onclick = function(){
+	tour = document.getElementById("numerodetour").innerHTML
+	tour++
+	document.getElementById("numerodetour").innerHTML = tour
 	protection = 15
 	document.getElementById("attaqueMage").disabled = false
 	 document.getElementById("defenseMage").disabled = true
@@ -184,8 +213,11 @@ defenseMage.onclick = function(){
 }
 
 //------Comptécence Guerrier--------//
-attaqueGuerrier.onclick = document.getElementById("numerodetour").innerHTML + 1
+
 attaqueGuerrier.onclick = function(){
+	tour = document.getElementById("numerodetour").innerHTML
+	tour++
+	document.getElementById("numerodetour").innerHTML = tour
 	degats = 20
 	document.getElementById("attaqueGuerrier").disabled = true
 	document.getElementById("defenseGuerrier").disabled = false
@@ -224,9 +256,12 @@ attaqueGuerrier.onclick = function(){
 
 
 defenseGuerrier.onclick = function(){
+	tour = document.getElementById("numerodetour").innerHTML
+	tour++
+	document.getElementById("numerodetour").innerHTML = tour
 	protection = 15
 	document.getElementById("attaqueGuerrier").disabled = false
-	document.getElementById("defensGuerrier").disabled = true
+	document.getElementById("defenseGuerrier").disabled = true
 	document.getElementById("rage").disabled = false
 	armure = Number(document.getElementById("defguerrier").innerHTML)
 	if (armure < 45){
@@ -238,6 +273,9 @@ defenseGuerrier.onclick = function(){
 //------Comptécence Robot--------//
 
 attaqueRobot.onclick = function(){
+	tour = document.getElementById("numerodetour").innerHTML
+	tour++
+	document.getElementById("numerodetour").innerHTML = tour
 	degats = 20
 	document.getElementById("attaqueRobot").disabled = true
 	document.getElementById("defenseRobot").disabled = false
@@ -248,8 +286,8 @@ attaqueRobot.onclick = function(){
 		document.getElementById("pvBoss").innerHTML = pvBoss
 		if (pvBoss <= 0){
 			document.getElementById("Boss").style.visibility="hidden";
-			document.getElementById("ciblegoule1").value = "Mort";
-			document.getElementById("ciblegoule1").disabled = true;
+			document.getElementById("cibleboss").value = "Mort";
+			document.getElementById("cibleboss").disabled = true;
 		}
 	}
 	if (numerodetarget.innerHTML == 1){
@@ -258,8 +296,8 @@ attaqueRobot.onclick = function(){
 		document.getElementById("pvGoule1").innerHTML = pvGoule1
 		if (pvGoule1 <= 0){
 			document.getElementById("goule1").style.visibility="hidden";
-			document.getElementById("cibleboss").value = "Mort";
-			document.getElementById("cibleboss").disabled = true;
+			document.getElementById("ciblegoule1").value = "Mort";
+			document.getElementById("ciblegoule1").disabled = true;
 		}
 	}
 	if (numerodetarget.innerHTML == 3){
@@ -274,12 +312,15 @@ attaqueRobot.onclick = function(){
 	}
 }
 
-defenseGuerrier.onclick = function(){
+defenseRobot.onclick = function(){
+	tour = document.getElementById("numerodetour").innerHTML
+	tour++
+	document.getElementById("numerodetour").innerHTML = tour
 	protection = 15
 	document.getElementById("attaqueRobot").disabled = false
-	 document.getElementById("defensRobot").disabled = true
-	 document.getElementById("acide").disabled = false
-	armure = Number(document.getElementById("derobot").innerHTML)
+	document.getElementById("defenseRobot").disabled = true
+	document.getElementById("acide").disabled = false
+	armure = Number(document.getElementById("defrobot").innerHTML)
 	if (armure < 45){
 		armure = (protection + armure)
 		document.getElementById("defrobot").innerHTML = armure
