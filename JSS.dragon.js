@@ -68,31 +68,32 @@ tourmonstre.onclick = function(){
 	document.getElementById("acide").disabled = true
 	//----------------------------//
 	degats = 20;
-	targetheros = Math.random(1,5);
+	list = [1,2,3];
+	targetheros = list.random;
 	if (targetheros == 1){
 		pvpaladin = document.getElementById("pvpaladin").innerHTML
 		pvpaladin= (pvpaladin - degats)
 		document.getElementById("pvpaladin").innerHTML = pvpaladin
 	} 
-	//------cible mage--------//
+		//------cible mage--------//
 	if (targetheros == 2){
 		pvmage = document.getElementById("pvmage").innerHTML
 		pvmage= (pvmage - degats)
 		document.getElementById("pvmage").innerHTML = pvmage
 		}
-	
-	//------cible guerrier--------//
+		//------cible guerrier--------//
 	if (targetheros == 3){
 		pvguerrier = document.getElementById("pvguerrier").innerHTML
 		pvguerrier= (pvguerrier - degats)
 		document.getElementById("pvguerrier").innerHTML = pvguerrier
 	} 
-	//------cible robot--------//
+		//------cible robot--------//
 	if (targetheros == 4){
 		pvrobot = document.getElementById("pvrobot").innerHTML
 		pvrobot= (pvrobot - degats)
 		document.getElementById("pvrobot").innerHTML = pvrobot
-	} 
+	}
+
 	//--------Stop Attaque--------//
 	document.getElementById("attaquePaladin").disabled = false
 	document.getElementById("defensePaladin").disabled = false
@@ -116,9 +117,6 @@ tourmonstre.onclick = function(){
 //------Comptécence paladin--------//
 
 attaquePaladin.onclick = function(){
-	tour = document.getElementById("numerodetour").innerHTML
-	tour++
-	document.getElementById("numerodetour").innerHTML = tour
 	document.getElementById("attaquePaladin").disabled = true
 	document.getElementById("defensePaladin").disabled = false
 	document.getElementById("soins").disabled = false
@@ -180,9 +178,6 @@ defensePaladin.onclick = function(){
 //------Comptécence Mage--------//
 
 attaqueMage.onclick = function(){
-	tour = document.getElementById("numerodetour").innerHTML
-	tour++
-	document.getElementById("numerodetour").innerHTML = tour
 	degats = 20
 	document.getElementById("attaqueMage").disabled = true
 	 document.getElementById("defenseMage").disabled = false
@@ -235,16 +230,14 @@ defenseMage.onclick = function(){
 		armure = (protection + armure)
 		document.getElementById("defmage").innerHTML = armure
 	}
+	
 }
 
 magie.onclick = function(){
-	tour = document.getElementById("numerodetour").innerHTML
-	tour++
-	document.getElementById("numerodetour").innerHTML = tour
-	degats = 20
-	document.getElementById("attaqueMage").disabled = true
+	degats = 35
+	document.getElementById("attaqueMage").disabled = false
 	 document.getElementById("defenseMage").disabled = false
-	 document.getElementById("magie").disabled = false
+	 document.getElementById("magie").disabled = true
 	if (numerodetarget.innerHTML == 2){
 		pvBoss = document.getElementById("pvBoss").innerHTML
 		pvBoss= (pvBoss - degats)
@@ -340,6 +333,45 @@ defenseGuerrier.onclick = function(){
 	}
 }
 
+rage.onclick = function(){
+	degats = 35
+	document.getElementById("attaqueGuerrier").disabled = false
+	 document.getElementById("defenseGuerrier").disabled = false
+	 document.getElementById("rage").disabled = true
+	if (numerodetarget.innerHTML == 2){
+		pvBoss = document.getElementById("pvBoss").innerHTML
+		pvBoss= (pvBoss - degats)
+		document.getElementById("pvBoss").innerHTML = pvBoss
+		if (pvBoss <= 0){
+			document.getElementById("Boss").style.visibility="hidden";
+			document.getElementById("cibleboss").value = "Mort";
+			document.getElementById("cibleboss").disabled = true;
+		}
+	}
+	if (numerodetarget.innerHTML == 1){
+		pvGoule1 = document.getElementById("pvGoule1").innerHTML
+		pvGoule1= (pvGoule1 - degats)
+		document.getElementById("pvGoule1").innerHTML = pvGoule1
+		if (pvGoule1 <= 0){
+			document.getElementById("goule1").style.visibility="hidden";
+			document.getElementById("ciblegoule1").value = "Mort";
+			document.getElementById("ciblegoule1").disabled = true;;
+		}
+	}
+	if (numerodetarget.innerHTML == 3){
+		pvGoule2 = Number(document.getElementById("pvGoule2").innerHTML)
+		pvGoule2 = (pvGoule2 - degats)
+		document.getElementById("pvGoule2").innerHTML = pvGoule2
+		if (pvGoule2 <= 0){
+			document.getElementById("goule2").style.visibility="hidden";
+			document.getElementById("ciblegoule2").value = "Mort";
+			document.getElementById("ciblegoule2").disabled = true;
+		}
+	}
+	if (pvGoule1 <=0 && pvGoule2 <=0 && pvBoss <=0 ){
+		alert("Vous avez gagné!");
+	}
+}
 //------Comptécence Robot--------//
 
 attaqueRobot.onclick = function(){
@@ -386,9 +418,6 @@ attaqueRobot.onclick = function(){
 }
 
 defenseRobot.onclick = function(){
-	tour = document.getElementById("numerodetour").innerHTML
-	tour++
-	document.getElementById("numerodetour").innerHTML = tour
 	protection = 15
 	document.getElementById("attaqueRobot").disabled = false
 	document.getElementById("defenseRobot").disabled = true
@@ -400,9 +429,41 @@ defenseRobot.onclick = function(){
 	}
 }
 
+acide.onclick = function(){
+	degats = 15
+	document.getElementById("attaqueRobot").disabled = false
+	document.getElementById("defenseRobot").disabled = false
+	document.getElementById("bombe").disabled = true
+	pvBoss = document.getElementById("pvBoss").innerHTML
+	pvBoss= (pvBoss - degats)
+	document.getElementById("pvBoss").innerHTML = pvBoss
+	if (pvBoss <= 0){
+		document.getElementById("Boss").style.visibility="hidden";
+		document.getElementById("cibleboss").value = "Mort";
+	document.getElementById("cibleboss").disabled = true;
+	}
+	pvGoule1 = document.getElementById("pvGoule1").innerHTML
+	pvGoule1= (pvGoule1 - degats)
+	document.getElementById("pvGoule1").innerHTML = pvGoule1
+	if (pvGoule1 <= 0){
+		document.getElementById("goule1").style.visibility="hidden";
+		document.getElementById("ciblegoule1").value = "Mort";
+		document.getElementById("ciblegoule1").disabled = true;;
+	}
+	pvGoule2 = Number(document.getElementById("pvGoule2").innerHTML)
+	pvGoule2 = (pvGoule2 - degats)
+	document.getElementById("pvGoule2").innerHTML = pvGoule2
+	if (pvGoule2 <= 0){
+		document.getElementById("goule2").style.visibility="hidden";
+		document.getElementById("ciblegoule2").value = "Mort";
+		document.getElementById("ciblegoule2").disabled = true;
+	}
+	if (pvGoule1 <=0 && pvGoule2 <=0 && pvBoss <=0 ){
+		alert("Vous avez gagné!");
+	}
+}
 
 //------------------------Monstre--------------------------//
-
 
 //----------goule1------------//
 document.getElementById("goule1").onmouseover = function(){
